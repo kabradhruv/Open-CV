@@ -20,6 +20,7 @@ while cam.isOpened():
             continue
         x,y,w,h=cv2.boundingRect(c)
         cv2.rectangle(frame1,(x,y),(x+w,y+h),(0,255,0),3,)
+        #Change the name of the sound file
         winsound.PlaySound('alert.wav',winsound.SND_ASYNC)
 
     if cv2.waitKey(10)==ord('q'):
